@@ -1,9 +1,8 @@
 :root {
-  --azul: #1D3A69;
   --guinda: #611232;
-  --blanco: #FFFFFF;
+  --azul: #1d3a69;
+  --blanco: #ffffff;
 
-  --overlay: rgba(29, 58, 105, 0.55);
-
-  --transition: all 0.5s ease;
+  --font-title: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
 }

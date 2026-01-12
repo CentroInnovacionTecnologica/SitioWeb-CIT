@@ -1,21 +1,21 @@
 const words = [
-  "INNOVADORES",
-  "MENTES CURIOSAS",
   "INVESTIGADORES",
-  "VISIONARIOS",
-  "CREATIVOS"
+  "CREATIVOS",
+  "MENTES CURIOSAS",
+  "VISIONARIOS"
 ];
 
 let index = 0;
-const wordSpan = document.getElementById("dynamicWord");
+const wordElement = document.getElementById("dynamic-word");
 
 setInterval(() => {
-  wordSpan.classList.add("fade-out");
+  wordElement.style.opacity = 0;
+  wordElement.style.transform = "translateY(6px)";
 
   setTimeout(() => {
     index = (index + 1) % words.length;
-    wordSpan.textContent = words[index];
-    wordSpan.classList.remove("fade-out");
-  }, 500);
-
-}, 3000);
+    wordElement.textContent = words[index];
+    wordElement.style.opacity = 1;
+    wordElement.style.transform = "translateY(0)";
+  }, 350);
+}, 2200);
