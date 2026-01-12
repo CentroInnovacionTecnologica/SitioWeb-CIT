@@ -29,11 +29,9 @@ body {
   align-items: center;
 }
 
-.nav-logo {
-  font-family: var(--font-title);
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: var(--azul);
+.nav-logo img {
+  height: 30px;   /* ⬅️ aumenta aquí */
+  width: auto;
 }
 
 /* LINKS DEL NAVBAR */
