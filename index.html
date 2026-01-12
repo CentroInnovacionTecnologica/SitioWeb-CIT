@@ -1,12 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-    <link rel="stylesheet" href="stylesIndex.css">
+  <meta charset="UTF-8">
+  <title>Centro de Innovación Tecnológica</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/hero.css">
 </head>
 <body>
-    
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <strong>CIT</strong>
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">¿Quiénes Somos?</a>
+    <a href="#">Servicios</a>
+    <a href="#">Aliados</a>
+    <a href="#">Contacto</a>
+  </nav>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <video autoplay muted loop>
+    <!-- video temporal -->
+    <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-content">
+    <h1>Centro de Innovación Tecnológica</h1>
+    <p>
+      Un lugar para las y los
+      <span id="dynamicWord" class="dynamic-word">INNOVADORES</span>
+    </p>
+  </div>
+</section>
+
+<script src="js/heroText.js"></script>
 </body>
 </html>
