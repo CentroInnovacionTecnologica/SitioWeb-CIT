@@ -51,10 +51,10 @@ body {
   font-family: var(--font-body);
   font-weight: 500;
   font-size: 0.95rem;
-  color: var(--azul);
+  color: #000;
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: var(--guinda);
+  color: #611232;
 }
