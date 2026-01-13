@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -21,20 +22,29 @@ body {
 .nav-container {
   max-width: 1200px;
   margin: auto;
-  padding: 14px 30px;
+  padding: 10px 30px;
   background: rgba(255,255,255,0.95);
   border-radius: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 70px;
+}
+
+/* LOGO */
+.nav-logo,
+.nav-logo a {
+  display: flex;
+  align-items: center;
 }
 
 .nav-logo img {
-  height: 30px;   /* ⬅️ aumenta aquí */
+  max-height: 90px;
   width: auto;
+  object-fit: contain;
 }
 
-/* LINKS DEL NAVBAR */
+/* LINKS */
 .nav-links a {
   margin-left: 25px;
   text-decoration: none;
@@ -42,10 +52,9 @@ body {
   font-weight: 500;
   font-size: 0.95rem;
   color: var(--azul);
-  transition: color 0.3s ease; /* animación suave */
+  transition: color 0.3s ease;
 }
 
-/* HOVER EN GUINDA */
 .nav-links a:hover {
   color: var(--guinda);
 }
