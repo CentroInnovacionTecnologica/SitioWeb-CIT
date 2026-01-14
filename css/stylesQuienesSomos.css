@@ -1,10 +1,11 @@
 
-/* Sección Historia */
+/* SECCIÓN DE ACERCA DE NOSOTROS */
 
 .stores-section {
-  margin-top: 80px;
+  margin-top: 70px;
   padding: 100px 6%;
   background-color: #ffffff;
+  margin-bottom: -60px;
 }
 
 .stores-wrapper {
@@ -28,7 +29,7 @@
 .stores-card {
   position: absolute;
   top: 50%;
-  left: -55px;     
+  right: -80px;     
   transform: translateY(-50%);
   width: 480px;
 
@@ -81,7 +82,7 @@
   }
 }
 
-/************************************************************+*/
+/*****************************************************************/
 
 /* Misión y Visión */
 
@@ -152,5 +153,68 @@
 
   .about-divider {
     display: none;
+  }
+}
+
+/************************************************************+*/
+
+/* Identidad */
+
+.identity-section {
+  padding: 100px 10%;
+  background-color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.identity-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+
+.identity-logo img {
+  max-width: 230px;
+  height: auto;
+  transition: all 0.4s ease;
+}
+
+.identity-logo img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.identity-text {
+  text-align: center;
+  max-width: 600px;
+}
+
+.identity-text h1 {
+  font-size: 38px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.identity-text h4 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #666;
+  letter-spacing: 1px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .identity-wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .identity-logo img {
+    max-width: 100px;
+  }
+
+  .identity-text h1 {
+    font-size: 30px;
   }
 }
