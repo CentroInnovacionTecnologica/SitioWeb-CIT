@@ -1,4 +1,5 @@
 
+// Animación para EVENTOS
 const revealEvents = document.querySelectorAll('.reveal-event');
 
 const observer = new IntersectionObserver(
