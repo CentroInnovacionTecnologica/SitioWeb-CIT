@@ -1,0 +1,112 @@
+/* CONTACTO */
+
+.directory-section {
+    margin-top: 60px;
+    padding: 100px 8%; /* antes 120px */
+    background: #ffffff;
+}
+
+.directory-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 50px; /* antes 80px */
+    color: #111;
+}
+
+/* Filas base */
+.directory-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;              /* antes 40px */
+    margin-bottom: 20px;   /* antes 70px */
+    align-items: stretch;
+}
+
+/* Inversión de columnas */
+.directory-row.reverse {
+    grid-template-columns: 1fr 2fr;
+}
+
+.directory-row.reverse .directory-info {
+    order: 2;
+}
+
+.directory-row.reverse .directory-image {
+    order: 1;
+}
+
+/* Información */
+.directory-info {
+    border: 1px solid #000;
+    padding: 32px;          /* antes 40px */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 24px;    /* ligeramente más compacto */
+}
+
+.directory-info h2 {
+    color: #000;
+    font-size: 1.7rem;
+    margin-bottom: 12px;    /* antes 16px */
+}
+
+.directory-info p {
+    color: #000;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 10px;    /* antes 12px */
+}
+
+.directory-info .email {
+    color: #000;
+    font-weight: 600;
+}
+
+/* Imagen */
+.directory-image {
+    border: 1px solid #000;
+    overflow: hidden;
+    border-radius: 24px;
+}
+
+.directory-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Imagen larga */
+.directory-banner {
+    border: 1px solid #000;
+    height: 300px;          /* antes 320px */
+    margin-bottom: 20px;    /* antes 80px */
+    overflow: hidden;
+    border-radius: 24px;
+}
+
+.directory-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+
+    .directory-row,
+    .directory-row.reverse {
+        grid-template-columns: 1fr;
+        gap: 20px;          /* aún más compacto en móvil */
+    }
+
+    .directory-row.reverse .directory-info,
+    .directory-row.reverse .directory-image {
+        order: unset;
+    }
+
+    .directory-title {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+    }
+}
