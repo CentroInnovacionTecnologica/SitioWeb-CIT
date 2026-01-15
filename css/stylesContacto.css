@@ -1,28 +1,27 @@
+
 /* CONTACTO */
 
 .directory-section {
     margin-top: 60px;
-    padding: 100px 8%; /* antes 120px */
+    padding: 100px 8%;
     background: #ffffff;
 }
 
 .directory-title {
     font-size: 3rem;
     font-weight: 700;
-    margin-bottom: 50px; /* antes 80px */
+    margin-bottom: 50px;
     color: #111;
 }
 
-/* Filas base */
 .directory-row {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 24px;              /* antes 40px */
-    margin-bottom: 20px;   /* antes 70px */
+    gap: 16px;    
+    margin-bottom: 20px;
     align-items: stretch;
 }
 
-/* Inversión de columnas */
 .directory-row.reverse {
     grid-template-columns: 1fr 2fr;
 }
@@ -35,54 +34,62 @@
     order: 1;
 }
 
-/* Información */
 .directory-info {
     border: 1px solid #000;
-    padding: 32px;          /* antes 40px */
+    padding: 32px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-radius: 24px;    /* ligeramente más compacto */
+    border-radius: 20px;
 }
 
 .directory-info h2 {
     color: #000;
     font-size: 1.7rem;
-    margin-bottom: 12px;    /* antes 16px */
+    margin-bottom: 24px; 
 }
 
 .directory-info p {
-    color: #000;
+    color: #475569;
     font-size: 1rem;
     line-height: 1.5;
-    margin-bottom: 10px;    /* antes 12px */
+    margin-bottom: 0px;
 }
 
-.directory-info .email {
-    color: #000;
+.directory-info .email a {
+    color: #1a5cff;            
     font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;  
+    transition: color 0.3s ease;
 }
 
-/* Imagen */
+.directory-info .email a:hover {
+    color: #0036cc;      
+}
+
 .directory-image {
     border: 1px solid #000;
+    border-radius: 20px;
     overflow: hidden;
-    border-radius: 24px;
+    height: 260px;
+    width: 100%;
 }
 
 .directory-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; 
+    object-position: center;
+    display: block;
 }
 
-/* Imagen larga */
 .directory-banner {
     border: 1px solid #000;
-    height: 300px;          /* antes 320px */
-    margin-bottom: 20px;    /* antes 80px */
+    height: 300px; 
+    margin-bottom: 20px; 
     overflow: hidden;
-    border-radius: 24px;
+    border-radius: 20px;
 }
 
 .directory-banner img {
@@ -91,13 +98,36 @@
     object-fit: cover;
 }
 
+/* ===== ANIMACIONES SCROLL ===== */
+
+/* Estado inicial (oculto) */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+/* Estado visible */
+.scroll-animate.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Pequeña variación para imágenes */
+.directory-image.scroll-animate,
+.directory-banner.scroll-animate {
+    transform: translateY(60px);
+}
+
 /* Responsive */
 @media (max-width: 900px) {
 
     .directory-row,
     .directory-row.reverse {
         grid-template-columns: 1fr;
-        gap: 20px;          /* aún más compacto en móvil */
+        gap: 20px;
     }
 
     .directory-row.reverse .directory-info,
