@@ -35,7 +35,7 @@
 }
 
 .directory-info {
-    border: 1px solid #000;
+    border: 1px solid #94A3B8;
     padding: 32px;
     display: flex;
     flex-direction: column;
@@ -69,7 +69,6 @@
 }
 
 .directory-image {
-    border: 1px solid #000;
     border-radius: 20px;
     overflow: hidden;
     height: 260px;
@@ -85,7 +84,6 @@
 }
 
 .directory-banner {
-    border: 1px solid #000;
     height: 300px; 
     margin-bottom: 20px; 
     overflow: hidden;
@@ -99,8 +97,6 @@
 }
 
 /* ===== ANIMACIONES SCROLL ===== */
-
-/* Estado inicial (oculto) */
 .scroll-animate {
     opacity: 0;
     transform: translateY(40px);
@@ -109,13 +105,11 @@
         transform 0.8s ease;
 }
 
-/* Estado visible */
 .scroll-animate.show {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Pequeña variación para imágenes */
 .directory-image.scroll-animate,
 .directory-banner.scroll-animate {
     transform: translateY(60px);
