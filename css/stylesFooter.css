@@ -17,14 +17,13 @@
   align-items: center;
 }
 
-/* ===== IZQUIERDA ===== */
 .footer-left {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  align-items: center;       /* ⬅ centra todo horizontalmente */
+  align-items: center;
   text-align: center;
-  transform: translateX(40px); /* ⬅ lo empuja hacia la derecha */
+  transform: translateX(40px); 
 }
 
 .footer-logo {
@@ -45,15 +44,16 @@
 }
 
 .footer-social a {
-  width: 45px;
-  height: 45px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #970028;
+  color: #000;
   font-size: 1.1rem;
+  text-decoration: none;
   transition: all 0.3s ease;
 }
 
@@ -63,21 +63,19 @@
   transform: translateY(-4px);
 }
 
-/* ===== DIVISOR ===== */
 .footer-divider {
   width: 1px;
   height: 80%;
   background-color: #334155;
 }
 
-/* ===== DERECHA ===== */
 .footer-right {
   display: flex;
-  flex-direction: column;     /* ⬅ uno debajo del otro */
+  flex-direction: column; 
   gap: 40px;
-  align-items: center;        /* ⬅ centra columnas */
+  align-items: center;   
   text-align: center;
-  transform: translateX(-40px); /* ⬅ lo acerca hacia el centro */
+  transform: translateX(-40px);
 }
 
 .footer-column h4 {
@@ -97,7 +95,32 @@
   color: #000;
 }
 
-/* ===== BOTTOM ===== */
+.footer-services a {
+  color: #000;
+  text-decoration: none;
+  font-size: 0.95rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.footer-services a:hover {
+  color: #970028;
+  transform: translateX(6px);
+}
+
+.footer-services a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #970028;
+  transition: width 0.3s ease;
+}
+
+.footer-services a:hover::after {
+  width: 100%;
+}
+
 .footer-bottom {
   margin-top: 40px;
   padding-top: 15px;
