@@ -249,3 +249,102 @@
     width: 64px;
   }
 }
+
+/*****************************************************************/
+
+/* SECCIÓN ALIADOS */
+
+.allies-section {
+  padding: 90px 8%;
+  background: #ffffff;
+}
+
+.allies-container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.allies-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.allies-header h2 {
+  margin-top: -60px;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.allies-header p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.05rem;
+  color: #000;
+  line-height: 1.6;
+  margin-bottom: -30px;
+}
+
+.allies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 35px;
+}
+
+.ally-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.35s ease;
+  border: 2px solid #e6e6e6;
+}
+
+.ally-card img {
+  max-width: 140px;
+  height: auto;
+  margin-bottom: 25px;
+  filter: grayscale(100%);
+  transition: filter 0.35s ease;
+}
+
+.ally-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.ally-card p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.ally-btn {
+  display: inline-block;
+  padding: 10px 26px;
+  border-radius: 30px;
+  background: #111;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.ally-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
+  border-color: #111;
+}
+
+.ally-card:hover img {
+  filter: grayscale(0%);
+}
+
+.ally-btn:hover {
+  background: #444;
+}
