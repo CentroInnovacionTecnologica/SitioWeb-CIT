@@ -249,3 +249,109 @@
     width: 64px;
   }
 }
+
+/*********************************************************************/
+
+/*****CARRUSEL*****/
+
+.carousel-section {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont;
+}
+
+.carousel-header h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #000;
+}
+
+.carousel-header p {
+  color: #000;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex: 0 0 auto;
+  border-radius: 24px;
+  overflow: hidden;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.square {
+  width: 400px;
+  height: 400px;
+}
+
+.horizontal {
+  width: 600px;
+  height: 400px;
+}
+
+.vertical {
+  width: 280px;
+  height: 400px;
+}
+
+.carousel-wrapper {
+  position: relative;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: #f3f4f6;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.arrow:hover {
+  background: #e5e7eb;
+  transform: scale(1.05);
+}
+
+.arrow.disabled {
+  background: #e5e7eb;
+  color: #9ca3af;
+  cursor: default;
+  pointer-events: none;
+  transform: none;
+}
+
+/*********************************************************************/

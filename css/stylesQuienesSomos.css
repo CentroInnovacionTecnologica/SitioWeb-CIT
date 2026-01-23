@@ -238,8 +238,8 @@
 
 .about-divider {
   width: 2px;
-  height: 150%;
-  background: linear-gradient(to bottom, transparent, #000, transparent);
+  height: 120%;
+  background: #000;
   opacity: 0.15;
 }
 
