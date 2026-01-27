@@ -268,7 +268,7 @@
   font-family: var(--font-title);
   font-size: 2.2rem;
   font-weight: 700;
-  color: #111827;
+  color: #000;
 }
 
 /* Flechas */
@@ -385,6 +385,7 @@
   font-size: 2.6rem;
   font-weight: 700;
   margin-bottom: 36px;
+  color: #000;
 }
 
 /* GRID PRINCIPAL */
