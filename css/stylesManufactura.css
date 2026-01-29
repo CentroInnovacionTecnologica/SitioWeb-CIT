@@ -249,3 +249,228 @@
     width: 64px;
   }
 }
+
+/*************************************************************/
+
+/* SECCIÓN IMAGENES */
+
+.split-section {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.split-image {
+  width: 50%;
+  height: 100%;
+}
+
+.split-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.split-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+  z-index: 2;
+}
+
+.split-content h2 {
+  font-size: 64px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.split-content p {
+  font-size: 18px;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+.split-content {
+  text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+/*************************************************************/
+
+/* SECCIÓN IMPRESIÓN 3D */
+
+.dashboard-section {
+  background: #0b0b0b;
+  padding: 80px 5%;
+  color: #e5e5e5;
+  font-family: 'Inter', sans-serif;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 10px;
+}
+
+/* TARJETAS */
+.card {
+  border: 1px solid #666;
+  background: #111;
+  border-radius: 26px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* COLUMNA IZQUIERDA */
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* HERO */
+.hero-card h1 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.hero-card p {
+  color: #aaa;
+  max-width: 480px;
+}
+
+/* TARJETAS INFERIORES */
+.bottom-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* INSIGHT */
+.insight-card h3 {
+  font-size: 1.4rem;
+}
+
+.big-number {
+  display: block;
+  font-size: 3.5rem;
+  margin: 20px 0;
+  color: #4ade80;
+}
+
+.insight-card p {
+  color: #999;
+  max-width: 220px;
+}
+
+/* SEMICÍRCULO VERDE */
+.green-glow {
+  position: absolute;
+  bottom: -60%;
+  left: -40%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(74,222,128,0.8), transparent 70%);
+  border-radius: 50%;
+}
+
+/* SERVICIOS */
+.services-card ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 60px;
+}
+
+.services-card li {
+  margin-bottom: 12px;
+  padding-left: 26px;
+  position: relative;
+}
+
+.services-card li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #4158d0;
+}
+
+/* ESFERA WIREFRAME */
+.wireframe {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.6;
+
+  /* profundidad */
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255,255,255,0.15),
+    rgba(255,255,255,0.02) 60%,
+    transparent 70%
+  );
+
+  /* anillos */
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.08);
+
+  transform: rotate(20deg);
+}
+
+/* MERIDIANOS */
+.wireframe::before,
+.wireframe::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+/* vertical */
+.wireframe::before {
+  transform: rotateX(65deg);
+}
+
+/* horizontal */
+.wireframe::after {
+  transform: rotateY(65deg);
+}
+
+/* LÍNEAS INTERNAS */
+.wireframe {
+  background-image:
+    repeating-radial-gradient(
+      circle,
+      transparent 0 18px,
+      rgba(255,255,255,0.06) 19px 20px
+    );
+}
+
+/* COLUMNA DERECHA */
+.project-card small {
+  color: #aaa;
+}
+
+.project-card h2 {
+  font-size: 3rem;
+  margin: 14px 0 24px;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 18px;
+}
+
+/*************************************************************/
