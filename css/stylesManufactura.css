@@ -390,7 +390,7 @@
 }
 
 .services-card li {
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   padding-left: 26px;
   position: relative;
 }
@@ -473,134 +473,134 @@
   border-radius: 18px;
 }
 
-/*************************************************************/
+/*===========================*/
+/***** DISEÑO RESPONSIVO *****/
+/*===========================*/
 
-/* SECCIÓN ESPECIFICACIONES */
-.specs-section {
-  background-color: #0b0b0b;
-  padding: 80px 5%;
-  color: #ffffff;
+@media (max-width: 1199px) {
+
+  .dashboard-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .hero-card h1 {
+    font-size: 2.4rem;
+  }
+
+  .project-card h2 {
+    font-size: 2.4rem;
+  }
 }
 
-/* TÍTULO */
-.specs-title {
-  margin-top: -80px;
-  text-align: center;
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 60px;
-}
-
-/* CONTENEDOR DE TARJETAS */
-.specs-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-}
-
-/* TARJETA */
-.spec-card {
-  border: 1px solid #666;
-  background: #121212;
-  border-radius: 18px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.spec-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(255, 255, 255, 0.05);
-}
-
-/* IMAGEN */
-.spec-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-}
-
-/* TEXTO */
-.spec-text {
-  padding: 25px 20px;
-  text-align: center;
-}
-
-.spec-text h3 {
-  font-size: 1.3rem;
-  margin-bottom: 12px;
-  font-weight: 600;
-}
-
-.spec-text p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #999;
-}
-
-/* RESPONSIVE */
 @media (max-width: 900px) {
-  .specs-container {
+
+  .dashboard-grid {
     grid-template-columns: 1fr;
   }
-}
 
-
-
-
-
-
-
-
-/* TARJETA ANCHA (OCUPA LAS 3 COLUMNAS) */
-.spec-wide {
-  grid-column: 1 / -1;
-  padding: 0;
-  margin-top: 10px;
-}
-
-/* CONTENIDO INTERNO */
-.spec-wide-content {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  padding: 40px;
-}
-
-/* TEXTO IZQUIERDA */
-.spec-wide-text {
-  flex: 1;
-}
-
-.spec-wide-text h3 {
-  font-size: 1.8rem;
-  margin-bottom: 16px;
-}
-
-.spec-wide-text p {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #bdbdbd;
-}
-
-/* IMAGEN DERECHA */
-.spec-wide-image {
-  flex: 1;
-}
-
-.spec-wide-image img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  border-radius: 14px;
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .spec-wide-content {
-    flex-direction: column;
+  .left-column {
+    order: 1;
   }
 
-  .spec-wide-image img {
+  .project-card {
+    order: 2;
+  }
+
+  .project-card h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero-card h1 {
+    font-size: 2.2rem;
+  }
+
+  .bottom-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .wireframe {
+    width: 180px;
+    height: 180px;
+    top: -30px;
+    right: -30px;
+  }
+
+  .green-glow {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .dashboard-section {
+    padding: 60px 6%;
+  }
+
+  .card {
+    padding: 28px;
+  }
+
+  .hero-card h1 {
+    font-size: 1.9rem;
+  }
+
+  .project-card h2 {
+    font-size: 1.9rem;
+  }
+
+  .bottom-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .big-number {
+    font-size: 3rem;
+  }
+
+  .services-card ul {
+    margin-top: 40px;
+  }
+
+  .wireframe {
+    width: 150px;
+    height: 150px;
+    opacity: 0.4;
+  }
+
+  .green-glow {
+    width: 220px;
     height: 220px;
   }
 }
+
+@media (max-width: 420px) {
+
+  .dashboard-section {
+    padding: 50px 5%;
+  }
+
+  .hero-card h1,
+  .project-card h2 {
+    font-size: 1.7rem;
+  }
+
+  .hero-card p,
+  .insight-card p,
+  .project-card small {
+    font-size: 0.95rem;
+  }
+
+  .card {
+    padding: 24px;
+    border-radius: 20px;
+  }
+
+  .wireframe,
+  .green-glow {
+    display: none;
+  }
+}
+
+/*************************************************************/
+
