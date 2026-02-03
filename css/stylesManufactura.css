@@ -301,6 +301,39 @@
   text-shadow: 0 4px 20px rgba(0,0,0,0.6);
 }
 
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1024px) {
+  .split-section {
+    height: 420px;
+  }
+
+  .split-content h2 {
+    font-size: 48px;
+  }
+
+  .split-content p {
+    font-size: 16px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .split-section {
+    height: 380px;
+  }
+
+  .split-content h2 {
+    font-size: 40px;
+  }
+
+  .split-content p {
+    font-size: 15px;
+    padding: 0 20px;
+  }
+}
+
 /*************************************************************/
 
 /* SECCIÓN IMPRESIÓN 3D */
