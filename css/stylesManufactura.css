@@ -473,6 +473,23 @@
   border-radius: 18px;
 }
 
+/* ===== ANIMACIONES SCROLL ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  filter: blur(6px);
+  transition: 
+    opacity 0.9s ease,
+    transform 0.9s ease,
+    filter 0.9s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
 /*===========================*/
 /***** DISEÑO RESPONSIVO *****/
 /*===========================*/
@@ -604,3 +621,111 @@
 
 /*************************************************************/
 
+/* SECCIÓN IMPRESORAS */
+
+.printers-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 0px 0 80px;
+}
+
+.printer-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 520px;
+}
+
+.printer-row.reverse {
+  direction: rtl;
+}
+
+.printer-row.reverse > * {
+  direction: ltr;
+}
+
+.printer-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.printer-info {
+  background: #ffffff;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.printer-info h2 {
+  margin-top: 0;
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #000;
+}
+
+.printer-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.printer-info li {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 14px;
+  color: #475569;
+}
+
+.printer-info strong {
+  color: #000;
+}
+
+.printer-info p {
+  max-width: 520px;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #000;
+  margin-top: 16px;
+  text-align: justify;
+}
+
+.printer-row {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.printer-row.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+@media (max-width: 1024px) {
+  .printer-info {
+    padding: 60px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .printer-row {
+    grid-template-columns: 1fr;
+  }
+
+  .printer-row.reverse {
+    direction: ltr;
+  }
+
+  .printer-image {
+    height: 320px;
+  }
+
+  .printer-info {
+    padding: 50px 30px;
+  }
+
+  .printer-info h2 {
+    font-size: 2rem;
+  }
+}
