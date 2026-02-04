@@ -48,6 +48,8 @@
   margin-top: 18px;
 }
 
+/*******************************************************/
+
 /* ============================= */
 /*  TECNOLOGÍAS WEB – SECCIÓN INTRO */
 /* ============================= */
@@ -56,8 +58,8 @@
     display: flex;
     align-items: center;
     padding: 120px 8%;
-    overflow: hidden; /* CLAVE */
-    gap: 50px; /* 👈 espacio “de un dedo” */
+    overflow: hidden;
+    gap: 50px; 
 }
 
 /* IMAGEN */
@@ -82,14 +84,14 @@
     padding-left: 6%;
     overflow: hidden;
 
-    height: 520px; /* 👈 MISMA ALTURA QUE LA IMAGEN */
+    height: 520px; 
 }
 
 .web-intro__content-inner {
     position: absolute;
     top: 50%;
     left: 0;
-    transform: translateY(-45%); /* 👈 ajuste fino */
+    transform: translateY(-45%);
     max-width: 420px;
     z-index: 2;
 }
@@ -108,121 +110,66 @@
     color: #000;
 }
 
-/* ============================= */
-/*  SECCIÓN VIDEO + TEXTO */
-/* ============================= */
+/*******************************************************/
 
-:root {
-  --block-height: 520px;
-}
+/* SECCIÓN PARALLAX */
 
-.web-video-section {
+.parallax-section {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("/imagenes/desarrolloWeb.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   display: flex;
-  gap: 80px;
-  padding: 140px 8%;
   align-items: center;
 }
 
-/* ============================= */
-/*  COLUMNA DE TEXTO */
-/* ============================= */
-
-.web-video-text {
+.parallax-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 20px;
   display: flex;
   flex-direction: column;
-  gap: 32px;                 /* espacio entre cuadros */
-  max-width: 560px;
-  height: var(--block-height);
-  justify-content: center;
+  gap: 60px;
 }
 
-/* ============================= */
-/*  CADA CUADRO DE TEXTO */
-/* ============================= */
-
-.text-card {
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.92),
-    rgba(0, 0, 0, 0.85)
-  );
-  color: #fff;
+.parallax-row {
+  max-width: 720px;
+  background: rgba(0, 0, 0, 0.55);
   padding: 40px 36px;
-  border-radius: 22px;
+  border-radius: 18px;
+  color: #fff;
+  backdrop-filter: blur(6px);
 }
 
-/* ============================= */
-/*  TIPOGRAFÍA */
-/* ============================= */
-
-.text-card h3 {
-  font-size: 28px;
+.parallax-row h2 {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
   font-weight: 700;
-  margin-bottom: 14px;
-  color: #ffffff;
 }
 
-.text-card p {
-  margin: 0;
-  font-size: 17px;
-  line-height: 1.75;
-  color: #e6e6e6;
-  text-align: left; /* más natural para bloques */
+.parallax-row p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #eaeaea;
 }
 
-.text-card em {
-  font-style: italic;
-  opacity: 0.85;
-}
+@media (max-width: 768px) {
+  .parallax-content {
+    gap: 100px;
+    padding: 100px 16px;
+  }
 
-.text-card strong {
-  color: #ffffff;
-  font-weight: 600;
-}
+  .parallax-row h2 {
+    font-size: 1.7rem;
+  }
 
-/* ============================= */
-/*  VIDEO */
-/* ============================= */
-
-.web-video-media {
-  height: var(--block-height);
-  border-radius: 28px;
-  overflow: hidden;
-  flex: 1;
-}
-
-.web-video-media video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* ============================= */
-/*  RESPONSIVE GRANDE */
-/* ============================= */
-
-@media (min-width: 1400px) {
-  :root {
-    --block-height: 560px;
+  .parallax-row p {
+    font-size: 1rem;
   }
 }
 
-/* ============================= */
-/*  ANIMACIÓN DE TARJETAS */
-/* ============================= */
-
-.text-card {
-  opacity: 0;
-  transform: translateX(-60px);
-  transition: 
-    opacity 1.2s ease,
-    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-/* Cuando la tarjeta es visible */
-.text-card.is-visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-
+/*******************************************************/
