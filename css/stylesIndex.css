@@ -98,19 +98,6 @@
   line-height: 1.6;
 }
 
-.news-link {
-  display: inline-block;
-  margin-top: 18px;
-  font-weight: 600;
-  color: #2563eb;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.news-link:hover {
-  color: #1d4ed8;
-}
-
 /*****************************************************************/
 
 /* SECCIÓN EVENTOS */
