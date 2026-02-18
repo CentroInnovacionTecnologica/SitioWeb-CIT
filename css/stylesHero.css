@@ -75,3 +75,158 @@
   color: #111827; /* negro elegante */
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
+
+
+/* ========================= */
+/* HERO RESPONSIVE FIX REAL  */
+/* ========================= */
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 6%;
+}
+
+.hero-content-left {
+  max-width: 900px;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  margin-top: 20px;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+}
+
+/* ========================= */
+/* TABLET */
+@media (max-width: 992px) {
+
+  .hero {
+    min-height: 85vh;
+  }
+
+  .hero-content {
+    padding: 0 8%;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2rem, 6vw, 3rem);
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1.1rem, 4vw, 1.8rem);
+  }
+}
+
+/* ========================= */
+/* MÓVIL */
+@media (max-width: 600px) {
+
+  .hero {
+    min-height: 75vh;
+  }
+
+  .hero-content {
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .hero-content-left {
+    width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(1.8rem, 7vw, 2.5rem);
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1rem, 5vw, 1.5rem);
+  }
+}
+
+/* ========================= */
+/* FIX TEXTO CORTADO MÓVIL  */
+/* ========================= */
+
+@media (max-width: 600px) {
+
+  .hero {
+    min-height: 85vh; /* un poco más alto */
+  }
+
+  .hero-content {
+    align-items: flex-end;   /* ya no centrado vertical */
+    padding-bottom: 120px;   /* lo baja visualmente */
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+}
+@media (max-width: 600px) {
+
+  .hero {
+    height: 100svh;   /* usa altura real del viewport móvil */
+    min-height: 100svh;
+    padding-top: 120px; /* espacio real para navbar */
+  }
+
+  .hero-content {
+    height: 100%;
+    align-items: center;   /* lo dejamos centrado */
+    justify-content: center;
+    text-align: left;
+  }
+
+  .hero-content-left {
+    width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(1.7rem, 6vw, 2.2rem);
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1rem, 4.5vw, 1.3rem);
+  }
+
+}
