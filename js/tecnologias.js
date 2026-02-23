@@ -55,3 +55,44 @@ document.addEventListener("DOMContentLoaded", () => {
 
   cards.forEach((card) => observer.observe(card));
 });
+
+
+/***************SECCION DE SOLUCIONES*****************/
+document.addEventListener("DOMContentLoaded", () => {
+
+  const cards = document.querySelectorAll(".solution-modern");
+  const modal = document.getElementById("modernModal");
+  const modalTitle = document.getElementById("modernTitle");
+  const modalList = document.getElementById("modernList");
+  const closeBtn = document.querySelector(".modern-close");
+
+  cards.forEach(card => {
+    card.querySelector(".solution-btn").addEventListener("click", () => {
+
+      const title = card.dataset.title;
+      const items = card.dataset.items.split("|");
+
+      modalTitle.textContent = title;
+      modalList.innerHTML = "";
+
+      items.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        modalList.appendChild(li);
+      });
+
+      modal.classList.add("active");
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.classList.remove("active");
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.remove("active");
+    }
+  });
+
+});
