@@ -728,3 +728,69 @@
     transform: translateX(0);
   }
 }
+
+/*LINEA DE CARRUSEL CONTINUO*/
+.clientes-marquee {
+  background: #ffffff;
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.marquee-row {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 15px 0;
+}
+
+.marquee-content {
+  display: inline-flex;
+  gap: 60px;
+  width: max-content;
+  animation: scrollLeft linear infinite;
+}
+
+.marquee-content span {
+  font-size: 18px;
+  font-weight: 500;
+  color: #1d3a69;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.marquee-content span:hover {
+  color: #611232;
+  transform: scale(1.1);
+}
+
+/* Velocidades */
+.slow {
+  animation-duration: 50s;
+}
+
+.medium {
+  animation-duration: 35s;
+}
+
+.fast {
+  animation-duration: 25s;
+}
+
+/* Dirección inversa */
+.reverse {
+  animation-direction: reverse;
+}
+
+/* Pausar al pasar mouse */
+.clientes-marquee:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+/* Animación */
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
