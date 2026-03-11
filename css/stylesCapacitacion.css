@@ -729,7 +729,7 @@
   }
 }
 
-/*LINEA DE CARRUSEL CONTINUO*/
+/* LINEA DE CLIENTES CONTINUA */
 .clientes-marquee {
   background: #ffffff;
   padding: 60px 0;
@@ -737,60 +737,107 @@
 }
 
 .marquee-row {
+  width: 100%;
   overflow: hidden;
-  white-space: nowrap;
-  margin: 15px 0;
+  margin: 14px 0;
+  position: relative;
 }
 
 .marquee-content {
-  display: inline-flex;
-  gap: 60px;
+  display: flex;
+  align-items: center;
+  gap: 56px;
   width: max-content;
-  animation: scrollLeft linear infinite;
+  white-space: nowrap;
+  animation-name: scrollLeft;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
 }
 
 .marquee-content span {
+  flex: 0 0 auto;
   font-size: 18px;
   font-weight: 500;
   color: #1d3a69;
   white-space: nowrap;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .marquee-content span:hover {
   color: #611232;
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
 
-/* Velocidades */
-.slow {
-  animation-duration: 50s;
+/* velocidades */
+.marquee-content.slow {
+  animation-duration: 42s;
 }
 
-.medium {
-  animation-duration: 35s;
+.marquee-content.medium {
+  animation-duration: 32s;
 }
 
-.fast {
-  animation-duration: 25s;
+.marquee-content.fast {
+  animation-duration: 24s;
 }
 
-/* Dirección inversa */
-.reverse {
-  animation-direction: reverse;
-}
-
-/* Pausar al pasar mouse */
+/* pausar al pasar mouse */
 .clientes-marquee:hover .marquee-content {
   animation-play-state: paused;
 }
 
-/* Animación */
+/* movimiento continuo hacia la izquierda */
 @keyframes scrollLeft {
   from {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-50%);
+    transform: translateX(calc(-50% - 28px));
   }
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .clientes-marquee {
+    padding: 40px 0;
+  }
+
+  .marquee-content {
+    gap: 38px;
+  }
+
+  .marquee-content span {
+    font-size: 16px;
+  }
+
+  @keyframes scrollLeft {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-50% - 19px));
+    }
+  }
+}
+
+.marquee-row::before,
+.marquee-row::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marquee-row::before {
+  left: 0;
+  background: linear-gradient(to right, #ffffff, transparent);
+}
+
+.marquee-row::after {
+  right: 0;
+  background: linear-gradient(to left, #ffffff, transparent);
 }
