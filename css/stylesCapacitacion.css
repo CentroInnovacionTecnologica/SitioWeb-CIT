@@ -292,7 +292,177 @@
 
 /*****************************************************************/
 
-/* ================= CERTIFICACIONES ================= */
+/* TEXTO DE LA INFORMACION DE CAPACITACION */
+
+.impacto-capacitacion {
+  padding: 100px 8%;
+  background-color: #ffffff;
+}
+
+.impacto-contenedor {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  flex-wrap: wrap;
+}
+
+.impacto-imagen {
+  flex: 1 1 450px;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: fadeLeft 1s ease forwards;
+}
+
+.impacto-imagen img {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  transition: transform 0.4s ease;
+}
+
+.impacto-imagen img:hover {
+  transform: scale(1.04);
+}
+
+.impacto-texto {
+  flex: 1 1 500px;
+  opacity: 0;
+  transform: translateX(50px);
+  animation: fadeRight 1s ease forwards;
+}
+
+.impacto-texto h2 {
+  font-size: 38px;
+  color: #1d3a69;
+  margin-bottom: 25px;
+  line-height: 1.3;
+}
+
+.impacto-texto p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 18px;
+  text-align: justify;
+}
+
+.impacto-datos {
+  display: flex;
+  gap: 20px;
+  margin-top: 35px;
+  flex-wrap: wrap;
+}
+
+.dato-box {
+  background: #f7f7f7;
+  padding: 18px 24px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.dato-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.dato-box h3 {
+  font-size: 18px;
+  color: #611232;
+  margin-bottom: 5px;
+}
+
+.dato-box span {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Animaciones */
+@keyframes fadeLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/*****************************************************************/
+
+/* LINEA DE CARRUSEL CONTINUO */
+
+.clientes-marquee {
+  background: #ffffff;
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.marquee-row {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 15px 0;
+}
+
+.marquee-content {
+  display: inline-flex;
+  gap: 60px;
+  width: max-content;
+  animation: scrollLeft linear infinite;
+}
+
+.marquee-content span {
+  font-size: 18px;
+  font-weight: 500;
+  color: #1d3a69;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.marquee-content span:hover {
+  color: #611232;
+  transform: scale(1.1);
+}
+
+/* Velocidades */
+.slow {
+  animation-duration: 50s;
+}
+
+.medium {
+  animation-duration: 35s;
+}
+
+.fast {
+  animation-duration: 25s;
+}
+
+/* Dirección inversa */
+.reverse {
+  animation-direction: reverse;
+}
+
+/* Pausar al pasar mouse */
+.clientes-marquee:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+/* Animación */
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/*****************************************************************/
+
+/* CERTIFICACIONES */
 
 .certifications {
   padding: 120px 6% 80px;
@@ -415,9 +585,9 @@
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
 }
 
-/* ===============================
-   CAPACITACIONES – ESTILO XBOX
-================================ */
+/*****************************************************************/
+
+/* CAPACITACIONES  */
 
 .courses-section {
   padding: 70px 3vw;
@@ -481,10 +651,6 @@
   max-width: 92%;
   line-height: 1.4;
 }
-
-/* ===============================
-   TAMAÑOS TIPO XBOX (CONTROLADOS)
-================================ */
 
 .course-card.large {
   grid-column: span 6;
@@ -629,168 +795,4 @@
 
 .skill-card:hover::before {
   transform: scaleX(1);
-}
-
-/*TECTO DE LA INFORMACION DE CAPACITACION*/
-.impacto-capacitacion {
-  padding: 100px 8%;
-  background-color: #ffffff; /* Fondo blanco */
-}
-
-.impacto-contenedor {
-  display: flex;
-  align-items: center;
-  gap: 70px;
-  flex-wrap: wrap;
-}
-
-.impacto-imagen {
-  flex: 1 1 450px;
-  opacity: 0;
-  transform: translateX(-50px);
-  animation: fadeLeft 1s ease forwards;
-}
-
-.impacto-imagen img {
-  width: 100%;
-  border-radius: 18px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-  transition: transform 0.4s ease;
-}
-
-.impacto-imagen img:hover {
-  transform: scale(1.04);
-}
-
-.impacto-texto {
-  flex: 1 1 500px;
-  opacity: 0;
-  transform: translateX(50px);
-  animation: fadeRight 1s ease forwards;
-}
-
-.impacto-texto h2 {
-  font-size: 38px;
-  color: #1d3a69;
-  margin-bottom: 25px;
-  line-height: 1.3;
-}
-
-.impacto-texto p {
-  font-size: 16px;
-  line-height: 1.9;
-  color: #444;
-  margin-bottom: 18px;
-  text-align: justify; /* 👈 Texto justificado */
-}
-
-.impacto-datos {
-  display: flex;
-  gap: 20px;
-  margin-top: 35px;
-  flex-wrap: wrap;
-}
-
-.dato-box {
-  background: #f7f7f7;
-  padding: 18px 24px;
-  border-radius: 12px;
-  transition: all 0.3s ease;
-}
-
-.dato-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-
-.dato-box h3 {
-  font-size: 18px;
-  color: #611232;
-  margin-bottom: 5px;
-}
-
-.dato-box span {
-  font-size: 14px;
-  color: #555;
-}
-
-/* Animaciones */
-@keyframes fadeLeft {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeRight {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/*LINEA DE CARRUSEL CONTINUO*/
-.clientes-marquee {
-  background: #ffffff;
-  padding: 60px 0;
-  overflow: hidden;
-}
-
-.marquee-row {
-  overflow: hidden;
-  white-space: nowrap;
-  margin: 15px 0;
-}
-
-.marquee-content {
-  display: inline-flex;
-  gap: 60px;
-  width: max-content;
-  animation: scrollLeft linear infinite;
-}
-
-.marquee-content span {
-  font-size: 18px;
-  font-weight: 500;
-  color: #1d3a69;
-  white-space: nowrap;
-  transition: all 0.3s ease;
-}
-
-.marquee-content span:hover {
-  color: #611232;
-  transform: scale(1.1);
-}
-
-/* Velocidades */
-.slow {
-  animation-duration: 50s;
-}
-
-.medium {
-  animation-duration: 35s;
-}
-
-.fast {
-  animation-duration: 25s;
-}
-
-/* Dirección inversa */
-.reverse {
-  animation-direction: reverse;
-}
-
-/* Pausar al pasar mouse */
-.clientes-marquee:hover .marquee-content {
-  animation-play-state: paused;
-}
-
-/* Animación */
-@keyframes scrollLeft {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
 }
