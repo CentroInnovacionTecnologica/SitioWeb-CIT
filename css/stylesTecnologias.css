@@ -384,8 +384,9 @@
 }
 
 .plans-title {
+  margin-top: -30px;
   text-align: center;
- font-size: clamp(2rem, 4vw, 2.8rem);
+  font-size: clamp(2rem, 4vw, 2.8rem);
   margin-bottom: 60px;
   font-weight: 700;
 }
@@ -445,4 +446,87 @@
   left: 0;
   color: #611232;
   font-weight: bold;
+}
+
+/* LAPTOPS PEQUEÑAS */
+
+@media (max-width: 1200px) {
+
+  .plans-section {
+    padding: 100px 7%;
+  }
+
+  .plans-grid {
+    gap: 40px;
+  }
+
+  .plan-card {
+    padding: 40px 30px;
+  }
+
+}
+
+/* TABLETS */
+
+@media (max-width: 900px) {
+
+  .plans-section {
+    padding: 90px 6%;
+  }
+
+  .plans-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+  }
+
+  .plan-header h3 {
+    font-size: 1.4rem;
+  }
+
+}
+
+/* TABLETS VERTICALES */
+
+@media (max-width: 768px) {
+
+  .plans-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .plan-card {
+    padding: 35px 25px;
+  }
+
+}
+
+/* CELULARES */
+
+@media (max-width: 480px) {
+
+  .plans-section {
+    padding: 70px 6%;
+  }
+
+  .plans-title {
+    margin-bottom: 40px;
+  }
+
+  .plan-card {
+    padding: 30px 22px;
+    border-radius: 24px;
+  }
+
+  .plan-header h3 {
+    font-size: 1.25rem;
+  }
+
+  .plan-header span {
+    font-size: 0.75rem;
+  }
+
+  .plan-features li {
+    font-size: 0.9rem;
+  }
+
 }
