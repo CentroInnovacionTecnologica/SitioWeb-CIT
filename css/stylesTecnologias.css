@@ -48,16 +48,14 @@
   margin-top: 18px;
 }
 
-/*******************************************************/
+/******************************************************************/
 
-/* ============================= */
-/*  TECNOLOGÍAS WEB – SECCIÓN INTRO */
-/* ============================= */
+/* TECNOLOGÍAS WEB – SECCIÓN INTRO */
 
 .web-intro {
     display: flex;
     align-items: center;
-    padding: 20px 8% 120px 8%; /* ↓ menos espacio arriba */
+    padding: 20px 8% 120px 8%;
     overflow: hidden;
     gap: 50px; 
 }
@@ -110,73 +108,13 @@
     color: #000;
 }
 
-/*******************************************************/
+/******************************************************************/
 
-/* SECCIÓN PARALLAX */
-
-.parallax-section {
-  min-height: 100vh;
-  width: 100%;
-  background-image: url("/imagenes/desarrolloWeb.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  display: flex;
-  align-items: center;
-}
-
-.parallax-content {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 120px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
-}
-
-.parallax-row {
-  max-width: 720px;
-  background: rgba(0, 0, 0, 0.55);
-  padding: 40px 36px;
-  border-radius: 18px;
-  color: #fff;
-  backdrop-filter: blur(6px);
-}
-
-.parallax-row h2 {
-  font-size: 2.2rem;
-  margin-bottom: 16px;
-  font-weight: 700;
-}
-
-.parallax-row p {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: #eaeaea;
-}
-
-@media (max-width: 768px) {
-  .parallax-content {
-    gap: 100px;
-    padding: 100px 16px;
-  }
-
-  .parallax-row h2 {
-    font-size: 1.7rem;
-  }
-
-  .parallax-row p {
-    font-size: 1rem;
-  }
-}
-
-/***************SECCION DE SOLUCIONES*****************/
+/* SECCION DE SOLUCIONES */
 
 .solutions-modern {
-  padding: 0px 8% 120px 8%; /* menos espacio arriba */
-  background: #ffffff; /* puedes usar tu tono institucional */
+  padding: 0px 8% 120px 8%;
+  background: #ffffff;
 }
 
 .solutions-title-modern {
@@ -243,8 +181,9 @@
   background: #7a1a3f;
 }
 
+/******************************************************************/
 
-/***************SECCION DE SOLUCIONES MODAL EN BODY*****************/
+/* SECCION DE SOLUCIONES MODAL EN BODY */
 
 .modern-modal {
   position: fixed;
@@ -287,8 +226,72 @@
   cursor: pointer;
 }
 
+/******************************************************************/
 
-/***************SECCION Características por Plan*****************/
+/* SECCIÓN PARALLAX */
+
+.parallax-section {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("/imagenes/desarrolloWeb.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+}
+
+.parallax-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.parallax-row {
+  max-width: 720px;
+  background: rgba(0, 0, 0, 0.55);
+  padding: 40px 36px;
+  border-radius: 18px;
+  color: #fff;
+  backdrop-filter: blur(6px);
+}
+
+.parallax-row h2 {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.parallax-row p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #eaeaea;
+}
+
+@media (max-width: 768px) {
+  .parallax-content {
+    gap: 100px;
+    padding: 100px 16px;
+  }
+
+  .parallax-row h2 {
+    font-size: 1.7rem;
+  }
+
+  .parallax-row p {
+    font-size: 1rem;
+  }
+}
+
+/******************************************************************/
+
+/* SECCION CARACTERÍSTICAS */
+
 .plans-section {
   padding: 120px 8%;
   background:
@@ -314,7 +317,7 @@
   background: white;
   padding: 50px 40px;
   border-radius: 30px;
-  border: 2px solid #611232; /* borde guinda permanente */
+  border: 2px solid #611232;
   box-shadow: 0 20px 60px rgba(0,0,0,0.05);
   transition: all 0.4s ease;
   position: relative;
@@ -326,7 +329,6 @@
     0 40px 100px rgba(97, 18, 50, 0.2),
     0 0 0 6px rgba(97, 18, 50, 0.06);
 }
-
 
 .plan-header h3 {
   font-size: 1.6rem;
