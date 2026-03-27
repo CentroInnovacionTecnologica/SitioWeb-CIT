@@ -1,3 +1,4 @@
+
 /* Título de la sección */
 
 .hero-title {
@@ -251,88 +252,239 @@
 
 /*****************************************************************/
 
-/* CATÁLOGO */
+/***** CATÁLOGO *****/
 
-.instalaciones {
+.section-bg {
   background-color: #000;
-  padding: 60px 80px;
-  display: flex;
-  justify-content: center;
+  width: 100%;
 }
 
-.contenedor {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  max-width: 1350px;
-}
-
-.info {
-  flex: 0 0 490px;
-  aspect-ratio: 1 / 1;
-  background-color: #2a2a2a;
-  padding: 25px;
-  color: #a6a6a6;
+.section-wrapper {
+  background-color: #000;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  border-radius: 10px;
-  margin-top: 180px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
 
-.tag {
-  font-size: 12px;
-  color: #8fa1ff;
-  letter-spacing: 2px;
-  margin-bottom: 10px;
-  display: inline-block;
-}
-
-.info h1 {
-  color: #ffffff;
-  margin-bottom: 10px;
-  font-size: 24px;
-}
-
-.info p {
-  margin-bottom: 210px;
-  font-size: 15px;
-}
-
-.info ul {
-  list-style: none;
-  padding: 0;
-}
-
-.info ul li {
-  margin-bottom: 8px;
-  font-size: 15px;
-  position: relative;
-}
-
-.info ul li::before {
-  position: absolute;
-  left: 0;
-  color: #a6a6a6;
-}
-
-.derecha {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.titulo-grande {
-  color: #ffffff;
-  font-size: clamp(1.4rem, 3vw, 2.8rem);
+.section-title {
+  font-size: clamp(3.2rem, 3vw, 4.7rem);
   font-weight: 300;
-  line-height: 1.1;
-  max-width: 900px;
+  line-height: 1.05;
+  color: #ffffff;
+  margin-left: calc(35% + 24px);
+  padding-top: 60px;
+  padding-bottom: 40px;
+  letter-spacing: -0.02em;
 }
 
-.visual {
-  width: 800px;
-  height: 490px;
+.cards-row {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+  padding-bottom: 24px;
+}
+
+.card-left {
+  flex: 0 0 35%;
+  background-color: #151515;
+  border-radius: 8px;
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 560px;
+}
+
+.card-left .tag {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.card-left .card-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 18px;
+  letter-spacing: -0.01em;
+}
+
+.card-left .card-desc {
+  font-size: 0.95rem;
+  color: #aaa;
+  line-height: 1.6;
+  font-weight: 300;
+  max-width: 320px;
+}
+
+.card-left .card-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: auto;
+  padding-top: 40px;
+}
+
+.card-left .card-tags span {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.card-right {
+  flex: 1;
   background-color: #050833;
-  border-radius: 10px;
+  border-radius: 8px;
+  min-height: 560px;
+}
+
+/* ─── SEGUNDA FILA — COLORES ALTERNATIVOS ─── */
+.card-left--dark {
+  background-color: #151515;
+}
+
+.card-right--alt {
+  background-color: #e7c752;
+}
+
+/* ─── TERCERA FILA — COLORES VERDES ─── */
+.card-left--green {
+  background-color: #151515;
+}
+
+.card-right--green {
+  background-color: #bf303a;
+}
+
+/* ─── CUARTA FILA — COLORES VERDES ─── */
+.card-left--red {
+  background-color: #151515;
+}
+
+.card-right--red {
+  background-color: #7b3c75;
+}
+
+/* ─── QUINTA FILA — COLORES VERDES ─── */
+.card-left--blue {
+  background-color: #151515;
+}
+
+.card-right--blue {
+  background-color: #056147;
+}
+
+/* ─── SEXTA FILA — COLORES VERDES ─── */
+.card-left--pink {
+  background-color: #151515;
+}
+
+.card-right--pink {
+  background-color: #3f4cc5;
+}
+
+/* ─── TABLET HORIZONTAL (1024px o menos) ────────────────────── */
+@media (max-width: 1024px) {
+
+  .section-wrapper {
+    padding: 0 24px;
+  }
+
+  .section-title {
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    margin-left: calc(40% + 20px);
+    padding-top: 48px;
+    padding-bottom: 32px;
+  }
+
+  .card-left {
+    flex: 0 0 40%;
+    min-height: 480px;
+    padding: 32px 28px;
+  }
+
+  .card-right {
+    min-height: 480px;
+  }
+}
+
+/* ─── TABLET VERTICAL (768px o menos) ───────────────────────── */
+@media (max-width: 768px) {
+
+  .section-wrapper {
+    padding: 0 20px;
+  }
+
+  .section-title {
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    margin-left: 0;   
+    padding-top: 40px;
+    padding-bottom: 28px;
+  }
+
+  .cards-row {
+    flex-direction: column; 
+    gap: 12px;
+    padding-bottom: 16px;
+  }
+
+  .card-left {
+    flex: none;
+    width: 100%;
+    min-height: auto;
+    padding: 32px 28px;
+  }
+
+  .card-left .card-desc {
+    max-width: 100%;
+  }
+
+  .card-right {
+    width: 100%;
+    min-height: 260px; 
+  }
+}
+
+/* ─── MÓVIL (480px o menos) ─────────────────────────────────── */
+@media (max-width: 480px) {
+
+  .section-wrapper {
+    padding: 0 16px;
+  }
+
+  .section-title {
+    font-size: clamp(1.5rem, 6vw, 2.2rem);
+    padding-top: 32px;
+    padding-bottom: 24px;
+  }
+
+  .cards-row {
+    gap: 10px;
+    padding-bottom: 12px;
+  }
+
+  .card-left {
+    padding: 24px 20px;
+  }
+
+  .card-left .card-title {
+    font-size: 1.5rem;
+  }
+
+  .card-left .card-desc {
+    font-size: 0.88rem;
+  }
+
+  .card-right {
+    min-height: 200px;
+  }
 }
