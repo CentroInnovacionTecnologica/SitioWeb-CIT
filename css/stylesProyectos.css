@@ -252,6 +252,8 @@
 
 /*****************************************************************/
 
+/***** ESTILOS PARA PROYEECTOS *****/
+
 /* VARIABLES & RESET */
 :root {
   --bg:          #000000;
@@ -544,5 +546,83 @@
   .circle-badge {
     width: 72px;
     height: 72px;
+  }
+}
+
+/*****************************************************************/
+
+/***** ESTILOS PARA EMPRESAS COLABORACIONES *****/
+
+/* SECCIÓN PRINCIPAL */
+.partners-section {
+  background-color: #000;
+  padding: 60px 40px;
+  width: 100%;
+}
+ 
+.partners-title {
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+  letter-spacing: 0.02em;
+}
+ 
+/* GRID DE LOGOS */
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 16px;
+  max-width: 1300px;
+  margin: 0 auto;
+  align-items: center;
+}
+ 
+/* TARJETA DE CADA EMPRESA */
+.partner-card {
+  background-color: #000;
+  border: 1px solid #333;
+  border-radius: 6px;
+  aspect-ratio: 3 / 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  transition: border-color 0.3s ease;
+}
+ 
+.partner-card:hover {
+  border-color: #888;
+}
+ 
+.partner-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+ 
+.partner-card:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+ 
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .partners-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+ 
+@media (max-width: 600px) {
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+ 
+  .partners-section {
+    padding: 40px 20px;
   }
 }
