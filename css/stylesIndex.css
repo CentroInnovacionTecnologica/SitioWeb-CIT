@@ -538,13 +538,13 @@
 /* AJUSTES EXTRA STORES */
 @media (max-width: 580px) {
   .stores-wrapper {
-    margin-bottom: 260px;
+    margin-bottom: 90px;
   }
 }
 
 @media (max-width: 468px) {
   .stores-wrapper {
-    margin-bottom: 280px;
+    margin-bottom: 110px;
   }
 }
 
@@ -554,19 +554,19 @@
   }
 
   .stores-wrapper {
-    margin-bottom: 310px;
+    margin-bottom: 150px;
   }
 }
 
 @media (max-width: 390px) {
   .stores-wrapper {
-    margin-bottom: 310px;
+    margin-bottom: 150px;
   }
 }
 
 @media (max-width: 345px) {
   .stores-wrapper {
-    margin-bottom: 420px;
+    margin-bottom: 130px;
   }
 }
 
@@ -758,7 +758,7 @@
 }
 
 .allies-header h2 {
-  margin-top: -60px;
+  margin-top: -180px;
   font-size: 2.8rem;
   font-weight: 700;
   color: #000;
