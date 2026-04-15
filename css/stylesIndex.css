@@ -109,6 +109,92 @@
 }
 
 /* ========================================================= */
+/* RESPONSIVE DESIGN                                         */
+/* ========================================================= */
+
+/* MÓVILES (hasta 480px) */
+@media (max-width: 480px) {
+  .news-section {
+    padding: 60px 15px;
+  }
+
+  .news-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .news-header p {
+    font-size: 0.95rem;
+  }
+
+  .news-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .news-image img {
+    height: 180px;
+  }
+
+  .news-content {
+    padding: 20px;
+  }
+
+  .news-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .news-content p {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* TABLETS (vertical: 481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .news-section {
+    padding: 80px 20px;
+  }
+
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .news-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .news-image img {
+    height: 200px;
+  }
+}
+
+
+/* TABLETS HORIZONTALES / LAPTOPS (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .news-header h2 {
+    font-size: 2.4rem;
+  }
+
+  .news-image img {
+    height: 210px;
+  }
+}
+
+
+/* DESKTOP GRANDE (más de 1024px) */
+@media (min-width: 1025px) {
+  .news-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ========================================================= */
 /* SECCIÓN EVENTOS                                           */
 /* ========================================================= */
 .events-section {
@@ -269,6 +355,113 @@
 
   .event-image img {
     height: 200px;
+  }
+}
+
+/* ========================================================= */
+/* RESPONSIVE DESIGN - EVENTOS                               */
+/* ========================================================= */
+
+/* MÓVILES (hasta 480px) */
+@media (max-width: 480px) {
+
+  .events-section {
+    padding: 60px 15px;
+  }
+
+  .events-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .events-header p {
+    font-size: 0.95rem;
+  }
+
+  .event-card-horizontal {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  /* Reordenamos elementos */
+  .event-date {
+    order: 1;
+    width: 60px;
+    height: 60px;
+  }
+
+  .event-content {
+    order: 2;
+  }
+
+  .event-image {
+    order: 3;
+  }
+
+  .event-image img {
+    height: 180px;
+  }
+
+  .event-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .event-content p {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* TABLETS (vertical: 481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+
+  .events-section {
+    padding: 80px 20px;
+  }
+
+  .event-card-horizontal {
+    grid-template-columns: 80px 1fr;
+    gap: 20px;
+  }
+
+  /* Imagen abajo ocupando todo */
+  .event-image {
+    grid-column: span 2;
+  }
+
+  .event-image img {
+    height: 200px;
+  }
+
+  .events-header h2 {
+    font-size: 2.2rem;
+  }
+}
+
+
+/* TABLETS HORIZONTALES (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .event-card-horizontal {
+    grid-template-columns: 80px 1fr 250px;
+    gap: 25px;
+    padding: 25px;
+  }
+
+  .event-image img {
+    height: 180px;
+  }
+
+  .events-header h2 {
+    font-size: 2.4rem;
+  }
+}
+
+
+/* 🖥️ DESKTOP GRANDE (más de 1200px) */
+@media (min-width: 1200px) {
+  .event-card-horizontal {
+    grid-template-columns: 90px 1fr 340px;
   }
 }
 
@@ -835,6 +1028,93 @@
 
 .ally-btn:hover {
   background: #444;
+}
+
+/* ========================================================= */
+/* RESPONSIVE DESIGN - ALIADOS                               */
+/* ========================================================= */
+
+/* MÓVILES (hasta 480px) */
+@media (max-width: 480px) {
+
+  .allies-section {
+    padding: 60px 20px;
+  }
+
+  .allies-header {
+    margin-bottom: 40px;
+  }
+
+  .allies-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .allies-header p {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+
+  .allies-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .ally-card {
+    padding: 25px 20px;
+  }
+
+  .ally-card img {
+    max-width: 110px;
+  }
+
+  .ally-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .ally-card p {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* TABLETS (vertical: 481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+
+  .allies-section {
+    padding: 70px 30px;
+  }
+
+  .allies-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .allies-header h2 {
+    font-size: 2.2rem;
+  }
+}
+
+
+/* TABLETS HORIZONTALES (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .allies-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .allies-header h2 {
+    font-size: 2.5rem;
+  }
+}
+
+
+/* DESKTOP GRANDE */
+@media (min-width: 1200px) {
+
+  .allies-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 /* ========================================================= */
