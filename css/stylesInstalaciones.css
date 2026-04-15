@@ -1,5 +1,6 @@
-
-/* Título de la sección */
+/* ========================================================= */
+/* TÍTULO DE LA SECCIÓN                                      */
+/* ========================================================= */
 
 .hero-title {
   width: 100%;
@@ -48,9 +49,9 @@
   margin-top: 18px;
 }
 
-/***********************************/
-/******** DISEÑO RESPONSIVO ********/
-/***********************************/
+/* ========================================================= */
+/* HERO RESPONSIVO                                           */
+/* ========================================================= */
 
 @media (max-width: 1023px) and (min-width: 768px) {
   .hero-title {
@@ -210,7 +211,7 @@
   }
 
   .hero-bg {
-    font-size: 2.0rem;
+    font-size: 2rem;
     letter-spacing: -0.03em;
   }
 
@@ -250,9 +251,9 @@
   }
 }
 
-/*****************************************************************/
-
-/***** CATÁLOGO *****/
+/* ========================================================= */
+/* CATÁLOGO DE INSTALACIONES                                 */
+/* ========================================================= */
 
 .section-bg {
   background-color: #000;
@@ -265,7 +266,7 @@
   flex-direction: column;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 40px 50px;
 }
 
 .section-title {
@@ -286,117 +287,149 @@
   padding-bottom: 24px;
 }
 
+/* ========================================================= */
+/* CARD IZQUIERDA                                            */
+/* ========================================================= */
+
 .card-left {
   flex: 0 0 35%;
-  background-color: #151515;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 40px 36px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 560px;
+  box-sizing: border-box;
+}
+
+/* Color base primera tarjeta */
+.card-left {
+  background: linear-gradient(180deg, #050833 0%, #050833 100%);
+}
+
+/* Colores por tarjeta izquierda */
+.card-left--dark {
+  background: linear-gradient(180deg, #9d842d 0%, #7d6820 100%);
+}
+
+.card-left--green {
+  background: linear-gradient(180deg, #bf303a 0%, #6f1c26 100%);
+}
+
+.card-left--red {
+  background: linear-gradient(180deg, #7b3c75 0%, #4e2548 100%);
+}
+
+.card-left--blue {
+  background: linear-gradient(180deg, #04543e 0%, #033f2f 100%);
+}
+
+.card-left--pink {
+  background: linear-gradient(180deg, #3340b5 0%, #27328f 100%);
+}
+
+.card-top {
+  display: flex;
+  flex-direction: column;
 }
 
 .card-left .tag {
   font-family: 'DM Sans', sans-serif;
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   font-weight: 500;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #888;
-  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.72);
+  margin-bottom: 12px;
 }
 
 .card-left .card-title {
   font-family: 'Syne', sans-serif;
-  font-size: 2rem;
+  font-size: clamp(1.6rem, 1.8vw, 2.2rem);
   font-weight: 700;
   color: #ffffff;
-  margin-bottom: 18px;
-  letter-spacing: -0.01em;
+  margin: 0 0 18px;
+  letter-spacing: -0.02em;
+  line-height: 1.02;
 }
 
 .card-left .card-desc {
-  font-size: 0.95rem;
-  color: #aaa;
-  line-height: 1.6;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.7;
   font-weight: 300;
-  max-width: 320px;
+  max-width: 330px;
+  margin: 0;
 }
 
 .card-left .card-tags {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 5px;
   margin-top: auto;
   padding-top: 40px;
 }
 
 .card-left .card-tags span {
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   font-weight: 500;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.10em;
   text-transform: uppercase;
-  color: #666;
+  color: rgba(255, 255, 255, 0.62);
+  line-height: 1.45;
 }
+
+/* ========================================================= */
+/* CARD DERECHA - IMÁGENES                                   */
+/* ========================================================= */
 
 .card-right {
   flex: 1;
-  background-color: #050833;
-  border-radius: 8px;
+  border-radius: 10px;
   min-height: 560px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #111;
 }
 
-/* ─── SEGUNDA FILA — COLORES ALTERNATIVOS ─── */
-.card-left--dark {
-  background-color: #151515;
+/* PRIMERA FILA - SALA DE JUNTAS */
+.card-right {
+  background-image: url("../imagenes/salajuntas.png");
 }
 
+/* SEGUNDA FILA - VIDEOCONFERENCIAS */
 .card-right--alt {
-  background-color: #e7c752;
+  background-image: url("../imagenes/salavideo.png");
 }
 
-/* ─── TERCERA FILA — COLORES VERDES ─── */
-.card-left--green {
-  background-color: #151515;
-}
-
+/* TERCERA FILA - SALA C1 */
 .card-right--green {
-  background-color: #bf303a;
+  background-image: url("../imagenes/salac1.png");
 }
 
-/* ─── CUARTA FILA — COLORES VERDES ─── */
-.card-left--red {
-  background-color: #151515;
-}
-
+/* CUARTA FILA - SALA C3 */
 .card-right--red {
-  background-color: #7b3c75;
+  background-image: url("../imagenes/salac3.png");
 }
 
-/* ─── QUINTA FILA — COLORES VERDES ─── */
-.card-left--blue {
-  background-color: #151515;
-}
-
+/* QUINTA FILA - SALA C4 */
 .card-right--blue {
-  background-color: #056147;
+  background-image: url("../imagenes/salac4.png");
 }
 
-/* ─── SEXTA FILA — COLORES VERDES ─── */
-.card-left--pink {
-  background-color: #151515;
-}
-
+/* SEXTA FILA - SALA DE CÓMPUTO */
 .card-right--pink {
-  background-color: #3f4cc5;
+  background-image: url("../imagenes/salacompu.png");
 }
 
-/* ─── TABLET HORIZONTAL (1024px o menos) ────────────────────── */
-@media (max-width: 1024px) {
+/* ========================================================= */
+/* TABLET HORIZONTAL                                         */
+/* ========================================================= */
 
+@media (max-width: 1024px) {
   .section-wrapper {
-    padding: 0 24px;
+    padding: 0 24px 40px;
   }
 
   .section-title {
@@ -415,24 +448,30 @@
   .card-right {
     min-height: 480px;
   }
+
+  .card-left .card-title {
+  font-size: 1.45rem;
+}
 }
 
-/* ─── TABLET VERTICAL (768px o menos) ───────────────────────── */
-@media (max-width: 768px) {
+/* ========================================================= */
+/* TABLET VERTICAL                                           */
+/* ========================================================= */
 
+@media (max-width: 768px) {
   .section-wrapper {
-    padding: 0 20px;
+    padding: 0 20px 34px;
   }
 
   .section-title {
     font-size: clamp(1.8rem, 5vw, 2.8rem);
-    margin-left: 0;   
+    margin-left: 0;
     padding-top: 40px;
     padding-bottom: 28px;
   }
 
   .cards-row {
-    flex-direction: column; 
+    flex-direction: column;
     gap: 12px;
     padding-bottom: 16px;
   }
@@ -441,24 +480,30 @@
     flex: none;
     width: 100%;
     min-height: auto;
-    padding: 32px 28px;
+    padding: 30px 26px;
   }
 
   .card-left .card-desc {
     max-width: 100%;
   }
 
+  .card-left .card-tags {
+    padding-top: 28px;
+  }
+
   .card-right {
     width: 100%;
-    min-height: 260px; 
+    min-height: 320px;
   }
 }
 
-/* ─── MÓVIL (480px o menos) ─────────────────────────────────── */
-@media (max-width: 480px) {
+/* ========================================================= */
+/* MÓVIL                                                     */
+/* ========================================================= */
 
+@media (max-width: 480px) {
   .section-wrapper {
-    padding: 0 16px;
+    padding: 0 16px 28px;
   }
 
   .section-title {
@@ -468,23 +513,35 @@
   }
 
   .cards-row {
-    gap: 10px;
-    padding-bottom: 12px;
-  }
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+  padding-bottom: 24px;
+}
 
-  .card-left {
-    padding: 24px 20px;
-  }
+.card-left,
+.card-right {
+  min-height: 560px;
+  height: 560px;
+  box-sizing: border-box;
+}
 
-  .card-left .card-title {
-    font-size: 1.5rem;
-  }
+.card-left {
+  flex: 0 0 35%;
+  border-radius: 10px;
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
 
-  .card-left .card-desc {
-    font-size: 0.88rem;
-  }
-
-  .card-right {
-    min-height: 200px;
-  }
+.card-right {
+  flex: 1;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #111;
+}
 }
