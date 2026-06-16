@@ -97,7 +97,7 @@
                     <div class="card insight-card">
                         <h3>Impresión 3D a Gran Escala<br></h3>
                         <span class="big-number">2026↗</span>
-                        <p>Nuestra infraestructura permite fabricar piezas de hasta 30 × 30 × 70 cm, adaptándonos a
+                        <p>Nuestra infraestructura permite fabricar piezas de hasta 30 × 30 × 60 cm, adaptándonos a
                             proyectos de diversa complejidad.</p>
 
                         <span class="green-glow"></span>
@@ -138,79 +138,240 @@
     <script src="js/impresion.js"></script>
 
 
-    <!-- SECCIÓN IMPRESORAS -->
-    <section class="printers-section">
+    <!-- MANUFACTURA ADITIVA — Bloques nuevos (A, B y C) -->
+    <section class="ma-nuevos">
 
-        <div class="printer-row">
-            <div class="printer-image">
-                <img src="imagenes/Raise3DPro2Plus.png" alt="Raise 3D Pro2 Plus">
+        <!-- ===================== BLOQUE A ===================== -->
+        <div class="ma-block">
+            <div class="ma-head">
+                <span class="ma-kicker"><span class="ma-pill"></span>Servicios industriales</span>
+                <h2 class="ma-title">Soluciones Industriales y de Ingeniería</h2>
+                <p class="ma-sub">Desarrollo integral de componentes optimizados, adaptándonos a las especificaciones
+                    técnicas más exigentes del mercado.</p>
             </div>
 
-            <div class="printer-info">
-                <h2>Raise 3D Pro2 Plus</h2>
+            <div class="ma-bento ma-bento--a">
+                <!-- Diseño y Fabricación -->
+                <div class="ma-card ma-glow">
+                    <h3>Diseño y Fabricación Personalizada</h3>
+                    <p class="ma-desc">Soluciones a medida para necesidades técnicas específicas.</p>
+                    <ul class="ma-checks">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                <path d="M5 12l5 5L20 6" />
+                            </svg><span><b>Repuestos descatalogados</b> o de alta complejidad</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                <path d="M5 12l5 5L20 6" />
+                            </svg><span><b>Prototipos funcionales</b> para validación mecánica</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                <path d="M5 12l5 5L20 6" />
+                            </svg><span><b>Negativos y moldes</b></span></li>
+                    </ul>
+                </div>
 
-                <ul>
-                    <li><strong>Superficie de impresión:</strong> 305 × 305 × 605 mm</li>
-                    <li><strong>Materiales:</strong> PLA, ABS, TPU, PETG, PLA + Fibra de carbono</li>
-                    <li><strong>Extrusores:</strong> 2</li>
-                    <li><strong>Resolución de capa:</strong> 0.050 mm</li>
-                </ul>
+                <!-- Escaneo 3D con dos modalidades -->
+                <div class="ma-card ma-rings">
+                    <h3>Digitalización e Ingeniería Inversa</h3>
+                    <p class="ma-desc">Escaneo 3D de alta precisión en dos modalidades, según el tamaño y la ubicación
+                        de la pieza.</p>
+                    <div class="ma-modal-label">Modalidades de captura</div>
+                    <div class="ma-subgrid">
+                        <div class="ma-subcard">
+                            <span class="ma-tag">IN SITU</span>
+                            <h4>En nuestras instalaciones</h4>
+                            <p>Luz estructurada para piezas medianas y reducidas con geometría de alta precisión.</p>
+                        </div>
+                        <div class="ma-subcard">
+                            <span class="ma-tag ma-tag--alt">A DOMICILIO</span>
+                            <h4>En planta o terreno</h4>
+                            <p>Fotogrametría avanzada y procesamiento de alta densidad para componentes de gran volumen.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="printer-row reverse">
-            <div class="printer-image">
-                <img src="imagenes/Stratasys.png" alt="Stratasys F170">
+        <!-- ===================== BLOQUE B ===================== -->
+        <div class="ma-block">
+            <div class="ma-head">
+                <span class="ma-kicker"><span class="ma-pill"></span>Sector creativo y educativo</span>
+                <h2 class="ma-title">Desarrollo Recreativo y Capacitación Técnica</h2>
+                <p class="ma-sub">Extendemos nuestro alcance tecnológico al sector creativo y educativo a través de
+                    servicios personalizados y formación.</p>
             </div>
 
-            <div class="printer-info">
-                <h2>Stratasys F170</h2>
+            <div class="ma-bento ma-bento--2">
+                <div class="ma-card ma-glow">
+                    <h3>Modelado y Réplica de Autor</h3>
+                    <p class="ma-desc">Creación y materialización de modelos personalizados.</p>
+                    <ul class="ma-checks">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                <path d="M5 12l5 5L20 6" />
+                            </svg><span>Mascotas y figuras humanas</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                <path d="M5 12l5 5L20 6" />
+                            </svg><span>Personajes a escala</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                <path d="M5 12l5 5L20 6" />
+                            </svg><span>Props y utilería de uso cotidiano</span></li>
+                    </ul>
+                </div>
 
-                <ul>
-                    <li><strong>Superficie de impresión:</strong> 254 x 254 x 254 mm</li>
-                    <li><strong>Materiales:</strong> ABS, ASA, QSR</li>
-                    <li><strong>Extrusores:</strong> 2</li>
-                    <li><strong>Resolución de capa:</strong> 0.020 mm</li>
-                </ul>
+                <div class="ma-card ma-rings">
+                    <h3>División Educativa</h3>
+                    <p class="ma-desc">Formación orientada a las nuevas generaciones de creadores.</p>
+                    <ul class="ma-checks">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                <path d="M5 12l5 5L20 6" />
+                            </svg><span><b>Cursos didácticos</b> de impresión 3D</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                <path d="M5 12l5 5L20 6" />
+                            </svg><span><b>Talleres</b> de modelado digital básico</span></li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                <path d="M5 12l5 5L20 6" />
+                            </svg><span>Desarrollo de habilidades técnicas</span></li>
+                    </ul>
+                </div>
             </div>
         </div>
 
-        <div class="printer-row">
-            <div class="printer-image">
-                <img src="imagenes/MakerBot.png" alt="MakerBot SKETCH">
+        <!-- ===================== BLOQUE C ===================== -->
+        <div class="ma-block">
+            <div class="ma-head">
+                <span class="ma-kicker"><span class="ma-pill"></span>Capacidades operativas</span>
+                <h2 class="ma-title">Infraestructura Tecnológica</h2>
+                <p class="ma-sub">Para garantizar la máxima repetibilidad y precisión dimensional…</p>
             </div>
 
-            <div class="printer-info">
-                <h2>MakerBot SKETCH</h2>
+            <div class="ma-printers">
 
-                <ul>
-                    <li><strong>Superficie de impresión:</strong> 150 x 150 x 150 mm</li>
-                    <li><strong>Materiales:</strong> ABS, PLA + Fibra de carbono</li>
-                    <li><strong>Extrusores:</strong> 1</li>
-                    <li><strong>Resolución de capa:</strong> 0.100mm</li>
-                </ul>
-            </div>
-        </div>
+                <article class="ma-prow">
+                    <div class="ma-prow-media">
+                        <img src="imagenes/Stratasys.png" alt="Impresora Stratasys F170" loading="lazy">
+                    </div>
+                    <div class="ma-prow-body">
+                        <div class="ma-prow-head">
+                            <span class="ma-cat">Grado industrial</span>
+                            <h3>Stratasys F170</h3>
+                        </div>
+                        <div class="ma-prow-specs">
+                            <div class="ma-spec"><span class="ma-lbl">Volumen</span><span class="ma-val">254 × 254 × 254
+                                    mm</span></div>
+                            <div class="ma-spec"><span class="ma-lbl">Materiales</span><span class="ma-val">PLA, ABS,
+                                    ASA,
+                                    TPU + soporte QSR</span></div>
+                            <div class="ma-spec"><span class="ma-lbl">Resolución de capa</span><span
+                                    class="ma-val">0.127 –
+                                    0.330 mm</span></div>
+                            <div class="ma-spec"><span class="ma-lbl">Velocidad</span><span class="ma-val">15 – 30 mm/s
+                                    ·
+                                    15–35 g/h</span></div>
+                        </div>
+                    </div>
+                </article>
 
-        <div class="printer-row reverse">
-            <div class="printer-image">
-                <img src="imagenes/CR-Scan.png" alt="Creality CR-Scan 01">
-            </div>
+                <article class="ma-prow">
+                    <div class="ma-prow-media">
+                        <img src="imagenes/Raise3D.png" alt="Impresora Raise3D Pro2 Plus" loading="lazy">
+                    </div>
+                    <div class="ma-prow-body">
+                        <div class="ma-prow-head">
+                            <span class="ma-cat">Gran formato</span>
+                            <h3>Raise3D Pro2 Plus</h3>
+                        </div>
+                        <div class="ma-prow-specs">
+                            <div class="ma-spec"><span class="ma-lbl">Volumen</span><span class="ma-val">305 × 305 × 605
+                                    mm</span></div>
+                            <div class="ma-spec"><span class="ma-lbl">Materiales</span><span class="ma-val">PLA, ABS,
+                                    PC,
+                                    TPU, TPE, Nylon, PETG + Fibra de Carbono</span></div>
+                            <div class="ma-spec"><span class="ma-lbl">Resolución de capa</span><span
+                                    class="ma-val">0.010 –
+                                    0.250 mm</span></div>
+                            <div class="ma-spec"><span class="ma-lbl">Velocidad</span><span class="ma-val">30 – 150 mm/s
+                                    ·
+                                    20–70 g/h</span></div>
+                        </div>
+                    </div>
+                </article>
 
-            <div class="printer-info">
-                <h2>Creality CR-Scan 01</h2>
+                <article class="ma-prow">
+                    <div class="ma-prow-media">
+                        <img src="imagenes/Creality.png" alt="Impresora Creality K1 Max" loading="lazy">
+                    </div>
+                    <div class="ma-prow-body">
+                        <div class="ma-prow-head">
+                            <span class="ma-cat">Alta velocidad</span>
+                            <h3>Creality K1 Max</h3>
+                        </div>
+                        <div class="ma-prow-specs">
+                            <div class="ma-spec"><span class="ma-lbl">Volumen</span><span class="ma-val">300 × 300 × 300
+                                    mm</span></div>
+                            <div class="ma-spec"><span class="ma-lbl">Materiales</span><span class="ma-val">PLA, PETG,
+                                    TPU,
+                                    ABS</span></div>
+                            <div class="ma-spec"><span class="ma-lbl">Resolución de capa</span><span
+                                    class="ma-val">0.100 –
+                                    0.350 mm</span></div>
+                            <div class="ma-spec"><span class="ma-lbl">Velocidad</span><span class="ma-val">300 – 600
+                                    mm/s ·
+                                    80–150 g/h</span></div>
+                        </div>
+                    </div>
+                </article>
 
-                <p>El Creality CR-Scan 01 es un escáner 3D versátil y fácil de usar, ideal para aplicaciones en
-                    manufactura aditiva, prototipado e ingeniería inversa. Ofrece una precisión de hasta 0.1 mm, escaneo
-                    en color realista, y dos modos de trabajo: manual, para piezas grandes o complejas, y con platina
-                    giratoria, para objetos pequeños y detallados.
-                </p>
+                <article class="ma-prow">
+                    <div class="ma-prow-media">
+                        <img src="imagenes/MakerBot.png" alt="Impresora Makerbot Sketch" loading="lazy">
+                    </div>
+                    <div class="ma-prow-body">
+                        <div class="ma-prow-head">
+                            <span class="ma-cat">Educativo · didáctico</span>
+                            <h3>Makerbot Sketch</h3>
+                        </div>
+                        <div class="ma-prow-specs">
+                            <div class="ma-spec"><span class="ma-lbl">Volumen</span><span class="ma-val">150 × 150 × 150
+                                    mm</span></div>
+                            <div class="ma-spec"><span class="ma-lbl">Materiales</span><span class="ma-val">PLA</span>
+                            </div>
+                            <div class="ma-spec"><span class="ma-lbl">Resolución de capa</span><span
+                                    class="ma-val">0.100 –
+                                    0.400 mm</span></div>
+                            <div class="ma-spec"><span class="ma-lbl">Velocidad</span><span class="ma-val">40 – 100 mm/s
+                                    ·
+                                    10–30 g/h</span></div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="ma-prow">
+                    <div class="ma-prow-media">
+                        <img src="imagenes/Anycubic.png" alt="Impresora Anycubic Kobra Neo" loading="lazy">
+                    </div>
+                    <div class="ma-prow-body">
+                        <div class="ma-prow-head">
+                            <span class="ma-cat">Validación rápida</span>
+                            <h3>Anycubic Kobra Neo</h3>
+                        </div>
+                        <div class="ma-prow-specs">
+                            <div class="ma-spec"><span class="ma-lbl">Volumen</span><span class="ma-val">220 × 220 × 250
+                                    mm</span></div>
+                            <div class="ma-spec"><span class="ma-lbl">Materiales</span><span class="ma-val">PLA, ABS,
+                                    PETG,
+                                    TPU</span></div>
+                            <div class="ma-spec"><span class="ma-lbl">Resolución de capa</span><span
+                                    class="ma-val">0.050 –
+                                    0.300 mm</span></div>
+                            <div class="ma-spec"><span class="ma-lbl">Velocidad</span><span class="ma-val">50 – 100 mm/s
+                                    ·
+                                    15–40 g/h</span></div>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
 
     </section>
-
-    <script src="js/manufactura.js"></script>
 
 
     <!-- FOOTER -->

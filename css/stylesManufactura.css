@@ -1,4 +1,3 @@
-
 /* Título de la sección */
 
 .hero-title {
@@ -298,7 +297,7 @@
 }
 
 .split-content {
-  text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
 /* RESPONSIVE DESIGN */
@@ -411,7 +410,7 @@
   left: -40%;
   width: 350px;
   height: 350px;
-  background: radial-gradient(circle, rgba(74,222,128,0.8), transparent 70%);
+  background: radial-gradient(circle, rgba(74, 222, 128, 0.8), transparent 70%);
   border-radius: 50%;
 }
 
@@ -447,16 +446,14 @@
   opacity: 0.6;
 
   /* profundidad */
-  background: radial-gradient(
-    circle at 30% 30%,
-    rgba(255,255,255,0.15),
-    rgba(255,255,255,0.02) 60%,
-    transparent 70%
-  );
+  background: radial-gradient(circle at 30% 30%,
+      rgba(255, 255, 255, 0.15),
+      rgba(255, 255, 255, 0.02) 60%,
+      transparent 70%);
 
   /* anillos */
   box-shadow:
-    inset 0 0 0 1px rgba(255,255,255,0.08);
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
 
   transform: rotate(20deg);
 }
@@ -468,7 +465,7 @@
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.15);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 /* vertical */
@@ -484,11 +481,9 @@
 /* LÍNEAS INTERNAS */
 .wireframe {
   background-image:
-    repeating-radial-gradient(
-      circle,
+    repeating-radial-gradient(circle,
       transparent 0 18px,
-      rgba(255,255,255,0.06) 19px 20px
-    );
+      rgba(255, 255, 255, 0.06) 19px 20px);
 }
 
 /* COLUMNA DERECHA */
@@ -511,7 +506,7 @@
   opacity: 0;
   transform: translateY(40px) scale(0.98);
   filter: blur(6px);
-  transition: 
+  transition:
     opacity 0.9s ease,
     transform 0.9s ease,
     filter 0.9s ease;
@@ -654,111 +649,409 @@
 
 /*************************************************************/
 
-/* SECCIÓN IMPRESORAS */
+/* ==========================================================
+   MANUFACTURA ADITIVA — Bloques nuevos (A, B y C)
+   Todo está scopeado bajo .ma-nuevos para no chocar con los
+   estilos existentes de tu sitio.
+   En Angular: pega esto en el .css/.scss del componente
+   (la encapsulación lo aísla igual; el scope .ma-nuevos no estorba).
+   ========================================================== */
 
-.printers-section {
-  width: 100%;
-  background: #ffffff;
-  padding: 0px 0 80px;
+.ma-nuevos {
+  /* Variables locales al contenedor (no se filtran al resto del sitio) */
+  --ma-bg: #0a0a0a;
+  --ma-card-a: #161616;
+  --ma-card-b: #0f0f0f;
+  --ma-nested: #1b1b1b;
+  --ma-border: rgba(255, 255, 255, .07);
+  --ma-border-hover: rgba(255, 255, 255, .16);
+  --ma-text: #f4f4f5;
+  --ma-muted: #8c8c8c;
+  --ma-muted-2: #a6a6a6;
+  --ma-green: #34d17f;
+  --ma-check: #6366f1;
+  --ma-radius: 28px;
+  --ma-radius-sm: 20px;
+
+  background: var(--ma-bg);
+  color: var(--ma-text);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
 }
 
-.printer-row {
+.ma-nuevos * {
+  box-sizing: border-box
+}
+
+/* contenedor central — ajusta max-width al de tu sitio si hace falta */
+.ma-nuevos .ma-block {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 46px 32px;
+}
+
+/* ---------- encabezado de cada bloque ---------- */
+.ma-nuevos .ma-head {
+  max-width: 760px;
+  margin-bottom: 26px
+}
+
+.ma-nuevos .ma-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ma-green);
+  letter-spacing: .04em;
+  margin-bottom: 18px;
+}
+
+.ma-nuevos .ma-pill {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--ma-green);
+  box-shadow: 0 0 0 4px rgba(52, 209, 127, .14);
+}
+
+.ma-nuevos .ma-title {
+  font-size: clamp(30px, 4.4vw, 46px);
+  font-weight: 700;
+  letter-spacing: -.025em;
+  line-height: 1.04;
+  margin: 0;
+}
+
+.ma-nuevos .ma-sub {
+  margin-top: 16px;
+  color: var(--ma-muted);
+  font-size: 17px;
+  max-width: 62ch
+}
+
+/* ---------- cards base ---------- */
+.ma-nuevos .ma-card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, var(--ma-card-a), var(--ma-card-b));
+  border: 1px solid var(--ma-border);
+  border-radius: var(--ma-radius);
+  padding: 38px 40px;
+  transition: border-color .3s ease, transform .3s ease;
+}
+
+.ma-nuevos .ma-card:hover {
+  border-color: var(--ma-border-hover);
+  transform: translateY(-3px)
+}
+
+.ma-nuevos .ma-card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  margin: 0
+}
+
+.ma-nuevos .ma-desc {
+  color: var(--ma-muted);
+  font-size: 15.5px;
+  margin-top: 14px;
+  max-width: 54ch
+}
+
+/* glow verde en esquina (eco del “2026”) */
+.ma-nuevos .ma-glow::before {
+  content: "";
+  position: absolute;
+  left: -60px;
+  bottom: -80px;
+  width: 240px;
+  height: 240px;
+  background: radial-gradient(circle, rgba(52, 209, 127, .22), transparent 68%);
+  pointer-events: none;
+}
+
+/* textura de círculos concéntricos (eco de la card de materiales) */
+.ma-nuevos .ma-rings::after {
+  content: "";
+  position: absolute;
+  right: -40px;
+  top: -40px;
+  width: 340px;
+  height: 340px;
+  opacity: .5;
+  background: repeating-radial-gradient(circle at center, transparent 0 26px, rgba(255, 255, 255, .04) 26px 27px);
+  pointer-events: none;
+}
+
+/* ---------- listas con check ---------- */
+.ma-nuevos .ma-checks {
+  list-style: none;
+  margin: 22px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px
+}
+
+.ma-nuevos .ma-checks li {
+  display: flex;
+  gap: 13px;
+  font-size: 15.5px;
+  color: var(--ma-muted-2)
+}
+
+.ma-nuevos .ma-checks li svg {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+  color: var(--ma-check)
+}
+
+.ma-nuevos .ma-checks li b {
+  color: var(--ma-text);
+  font-weight: 600
+}
+
+/* ---------- grids ---------- */
+.ma-nuevos .ma-bento {
+  display: grid;
+  gap: 20px
+}
+
+.ma-nuevos .ma-bento--2 {
+  grid-template-columns: 1fr 1fr
+}
+
+.ma-nuevos .ma-bento--a {
+  grid-template-columns: 1fr 1.25fr
+}
+
+/* ---------- sub-cards (In Situ / A Domicilio) ---------- */
+.ma-nuevos .ma-modal-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ma-muted);
+  margin: 22px 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ma-nuevos .ma-modal-label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--ma-border)
+}
+
+.ma-nuevos .ma-subgrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 520px;
+  gap: 16px
 }
 
-.printer-row.reverse {
-  direction: rtl;
+.ma-nuevos .ma-subcard {
+  background: var(--ma-nested);
+  border: 1px solid var(--ma-border);
+  border-radius: var(--ma-radius-sm);
+  padding: 22px;
 }
 
-.printer-row.reverse > * {
-  direction: ltr;
+.ma-nuevos .ma-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .07em;
+  color: #fff;
+  background: var(--ma-check);
+  padding: 5px 10px;
+  border-radius: 8px;
+  margin-bottom: 12px;
 }
 
-.printer-image img {
+.ma-nuevos .ma-tag--alt {
+  background: #0e7c54
+}
+
+.ma-nuevos .ma-subcard h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0
+}
+
+.ma-nuevos .ma-subcard p {
+  color: var(--ma-muted);
+  font-size: 13.5px;
+  margin-top: 9px
+}
+
+/* ==========================================================
+   BLOQUE C — Infraestructura Tecnológica 
+ ==========================================================*/
+ 
+ .ma-nuevos .ma-printers {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ---- fila ---- */
+.ma-nuevos .ma-prow {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 30px;
+  align-items: center;
+  background: linear-gradient(180deg, var(--ma-card-a), var(--ma-card-b));
+  border: 1px solid var(--ma-border);
+  border-radius: var(--ma-radius);
+  padding: 22px;
+  transition: border-color .3s, transform .3s;
+}
+
+.ma-nuevos .ma-prow:hover {
+  border-color: var(--ma-border-hover);
+  transform: translateY(-3px);
+}
+
+/* ---- imagen (marco de proporción fija: siempre encaja) ---- */
+.ma-nuevos .ma-prow-media {
+  aspect-ratio: 4 / 3;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--ma-border);
+  background: radial-gradient(120px 80px at 70% 25%, rgba(255, 255, 255, .06), transparent 70%), #101010;
+}
+
+.ma-nuevos .ma-prow-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
-.printer-info {
-  background: #ffffff;
-  padding: 80px;
+/* ---- cuerpo ---- */
+.ma-nuevos .ma-prow-body {
+  min-width: 0;
+  /* evita que el texto largo desborde la columna */
+}
+
+.ma-nuevos .ma-prow-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+.ma-nuevos .ma-prow-head .ma-cat {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--ma-green);
+  background: rgba(52, 209, 127, .1);
+  border: 1px solid rgba(52, 209, 127, .22);
+  padding: 6px 11px;
+  border-radius: 9px;
+}
+
+.ma-nuevos .ma-prow-head h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* ---- specs en columnas ---- */
+.ma-nuevos .ma-prow-specs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.ma-nuevos .ma-spec {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 5px;
+  padding-left: 16px;
+  border-left: 1px solid var(--ma-border);
 }
 
-.printer-info h2 {
-  margin-top: 0;
-  font-size: 2.4rem;
+.ma-nuevos .ma-prow-specs .ma-lbl {
+  font-size: 11px;
   font-weight: 600;
-  margin-bottom: 24px;
-  color: #000;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #6f6f6f;
 }
 
-.printer-info ul {
-  list-style: none;
-  padding: 0;
+.ma-nuevos .ma-prow-specs .ma-val {
+  font-size: 14px;
+  color: #e7e7e7;
+  font-weight: 500;
 }
 
-.printer-info li {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  margin-bottom: 14px;
-  color: #475569;
-}
+/* ---- responsive ---- */
+@media (max-width: 900px) {
+  .ma-nuevos .ma-prow {
+    grid-template-columns: 1fr;
+    /* imagen arriba, cuerpo abajo */
+    gap: 22px;
+  }
 
-.printer-info strong {
-  color: #000;
-}
+  .ma-nuevos .ma-prow-media {
+    aspect-ratio: 16 / 9;
+    /* más panorámica al ocupar todo el ancho */
+  }
 
-.printer-info p {
-  max-width: 520px;
-  font-size: 1.05rem;
-  line-height: 1.9;
-  color: #000;
-  margin-top: 16px;
-  text-align: justify;
-}
-
-.printer-row {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.printer-row.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-@media (max-width: 1024px) {
-  .printer-info {
-    padding: 60px 40px;
+  .ma-nuevos .ma-prow-specs {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 768px) {
-  .printer-row {
+@media (max-width: 520px) {
+  .ma-nuevos .ma-prow-specs {
     grid-template-columns: 1fr;
   }
 
-  .printer-row.reverse {
-    direction: ltr;
+  .ma-nuevos .ma-spec {
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid var(--ma-border);
+    padding-top: 12px;
+  }
+}
+
+/* ---------- responsive ---------- */
+@media(max-width:980px) {
+
+  .ma-nuevos .ma-bento--a,
+  .ma-nuevos .ma-bento--2 {
+    grid-template-columns: 1fr
   }
 
-  .printer-image {
-    height: 320px;
+  .ma-nuevos .ma-printers {
+    grid-template-columns: 1fr 1fr
+  }
+}
+
+@media(max-width:680px) {
+  .ma-nuevos .ma-block {
+    padding: 36px 18px
   }
 
-  .printer-info {
-    padding: 50px 30px;
+  .ma-nuevos .ma-card {
+    padding: 30px 24px
   }
 
-  .printer-info h2 {
-    font-size: 2rem;
+  .ma-nuevos .ma-subgrid {
+    grid-template-columns: 1fr
+  }
+
+  .ma-nuevos .ma-printers {
+    grid-template-columns: 1fr
   }
 }
