@@ -395,32 +395,32 @@
 
 /* PRIMERA FILA - SALA DE JUNTAS */
 .card-right {
-  background-image: url("../imagenes/salajuntas.png");
+  background-image: url("../imagenes/instalaciones/salajuntas.png");
 }
 
 /* SEGUNDA FILA - VIDEOCONFERENCIAS */
 .card-right--alt {
-  background-image: url("../imagenes/salavideo.png");
+  background-image: url("../imagenes/instalaciones/salavideo.png");
 }
 
 /* TERCERA FILA - SALA C1 */
 .card-right--green {
-  background-image: url("../imagenes/salac1.png");
+  background-image: url("../imagenes/instalaciones/salac1.png");
 }
 
 /* CUARTA FILA - SALA C3 */
 .card-right--red {
-  background-image: url("../imagenes/salac3.png");
+  background-image: url("../imagenes/instalaciones/salac3.png");
 }
 
 /* QUINTA FILA - SALA C4 */
 .card-right--blue {
-  background-image: url("../imagenes/salac4.png");
+  background-image: url("../imagenes/instalaciones/salac4.png");
 }
 
 /* SEXTA FILA - SALA DE CÓMPUTO */
 .card-right--pink {
-  background-image: url("../imagenes/salacompu.png");
+  background-image: url("../imagenes/instalaciones/salacompu.png");
 }
 
 /* ========================================================= */

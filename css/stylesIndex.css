@@ -490,22 +490,20 @@
 }
 
 .card-left {
-  background-image: url("/imagenes/jovenUni.jpg");
+  background-image: url("/imagenes/inicio/jovenUni.jpg");
 }
 
 .card-right {
-  background-image: url("/imagenes/JovenEmprendedora.png");
+  background-image: url("/imagenes/inicio/JovenEmprendedora.png");
 }
 
 .split-card::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.2)
-  );
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.2));
   z-index: 1;
 }
 
@@ -573,7 +571,7 @@
 /* SECCIÓN ACERCA DE NOSOTROS                                */
 /* ========================================================= */
 .stores-section {
-  padding: 100px 6%;
+  padding: 100px 6% 200px;   /* arriba | laterales | abajo */
   background-color: #ffffff;
 }
 
@@ -586,7 +584,6 @@
   position: relative;
   width: 100%;
   max-width: 1200px;
-  min-height: 620px;
 }
 
 .stores-image img {
@@ -771,7 +768,7 @@
 .hero-title {
   position: relative;
   min-height: 100vh;
-  background-image: url("../imagenes/citactual.png");
+  background-image: url("../imagenes/inicio/citactual.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -853,6 +850,7 @@
 }
 
 @media (max-width: 768px) {
+
   .hero,
   .hero-section,
   .hero-title {
@@ -917,6 +915,7 @@
 }
 
 @media (max-width: 768px) {
+
   .hero-content h1,
   .hero-container h1,
   .hero-front h1,
